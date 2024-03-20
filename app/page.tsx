@@ -1,11 +1,12 @@
-import Room from "./Room"
+import CollaborativeApp from "./CollaborativeApp";
+import Room from "./Room";
 
 function Page() {
   return (
     <Room>
-      <h1>Page</h1>
+      <CollaborativeApp />
     </Room>
-  )
+  );
 }
 
-export default Page
+export default Page;
