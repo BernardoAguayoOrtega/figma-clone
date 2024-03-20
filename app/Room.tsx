@@ -1,6 +1,6 @@
 "use client";
 
-import { RoomProvider } from "@/liveblocks.config";
+import { RoomProvider } from "../liveblocks.config";
 import { ClientSideSuspense } from "@liveblocks/react";
 
 function Room({ children }: { children: React.ReactNode }) {
