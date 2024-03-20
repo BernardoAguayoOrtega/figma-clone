@@ -1,16 +1,10 @@
 "use client";
 
-import { RoomProvider } from "../liveblocks.config";
-import { ClientSideSuspense } from "@liveblocks/react";
+import { useOthers } from "@/liveblocks.config";
 
-function Room({ children }: { children: React.ReactNode }) {
-  return (
-    <RoomProvider id='my-room' initialPresence={{}}>
-      <ClientSideSuspense fallback={<div>Loading...</div>}>
-        {() => children}
-      </ClientSideSuspense>
-    </RoomProvider>
-  );
+export function Room() {
+  const others = useOthers();
+  const userCount = others.length;
+
+  return <div>There are {userCount} other user(s) online</div>;
 }
-
-export default Room;
